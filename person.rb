@@ -1,5 +1,13 @@
+# frozen_string_literal: true
+
+# This syntax creates a Person class and makes sure makes other files cn create objects from it.
 class Person
-  def initialize(age, name = 'unknown', parent_permission = true)  #constructor
+  # @param age [Integer] The age of the person.
+  # @param name [String] The name of the person (default is 'unknown').
+  # @param parent_permission [Boolean] Permission from parents (default is true).
+
+  # constructor
+  def initialize(age, name: 'unknown', parent_permission: true)
     @id = Random.rand(1..1000)
     @name = name
     @age = age
@@ -15,9 +23,7 @@ class Person
     of_age? || @parent_permission
   end
 
-  Private                                   #private method
-   def of_age? 
+  def of_age?
     @age >= 18
   end
 end
-
