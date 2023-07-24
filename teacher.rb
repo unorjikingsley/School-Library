@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'person'
 
 # This syntax creates a Teacher class that inherits from the person class and adds and modifies the person object.

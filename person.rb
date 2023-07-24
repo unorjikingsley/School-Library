@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This syntax creates a Person class and makes sure makes other files cn create objects from it.
 class Person
   # @param age [Integer] The age of the person.
