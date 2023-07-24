@@ -12,8 +12,8 @@ class Person
     @parent_permission = parent_permission
   end
 
-  attr_reader :id                                   #getters
-  attr_accessor :name, :age                         #setters
+  attr_reader :id # getters
+  attr_accessor :name, :age # setters
 
   def can_use_services?
     of_age? || @parent_permission
