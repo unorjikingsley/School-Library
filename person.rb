@@ -1,5 +1,5 @@
 # Make sure that your Person class inherits from Nameable
-# Make sure that this class has a method correct_name implemented. It should simply 
+# Make sure that this class has a method correct_name implemented. It should simply
 # return the name attribute.
 
 require_relative 'nameable'
@@ -28,8 +28,6 @@ class Person < Nameable
   def correct_name
     @name
   end
-
-  Private
 
   def of_age?
     @age >= 18
