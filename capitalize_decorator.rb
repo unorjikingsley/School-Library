@@ -3,7 +3,6 @@
 # Implement a method correct_name that capitalizes the output of @nameable.correct_name.
 
 require './base_decorator'
-require_relative('./person')
 
 class CapitalizeDecorator < Base_Decorator
   def correct_name
