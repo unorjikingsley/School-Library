@@ -17,10 +17,15 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rental = []
   end
 
   attr_reader :id # getters
-  attr_accessor :name, :age # setters
+  attr_accessor :name, :age, :rentals # setters
+
+  def add_rental(book, date)
+    Rental.new(date, book, self)
+  end
 
   def can_use_services?
     of_age? || @parent_permission

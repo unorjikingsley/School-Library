@@ -11,9 +11,17 @@ class Student < Person
   def initialize(age, classroom, name: 'unknown', parent_permission: true)
     super(age, name, parent_permission)
     @classroom = classroom
+    # Create the belongs-to side (a student belongs to a classroom).
+    add_classroom(classroom)
   end
 
   attr_accessor :classroom
+
+  # Make sure that when setting the classroom for a student it also adds it to the classrooms' students.
+  def add_classroom(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.include?(self)
+  end
 
   def play_hooky
     '¯\(ツ)/¯'
