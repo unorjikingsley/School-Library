@@ -6,25 +6,24 @@ require_relative 'nameable'
 
 # This syntax creates a Person class and makes sure makes other files cn create objects from it.
 class Person < Nameable
+  attr_accessor :name, :age, :type
+  attr_reader :id, :rentals
+
   # @param age [Integer] The age of the person.
   # @param name [String] The name of the person (default is 'unknown').
   # @param parent_permission [Boolean] Permission from parents (default is true).
 
   # constructor
-  def initialize(age, parent_permission: true, name: 'unknown')
+  def initialize(age, name = 'unknown', parent_permission: true)
     super()
-    @id = Random.rand(1..1000)
+    @id = Random.rand(1..188)
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @rental = []
+    @rentals = []
   end
 
-  attr_accessor :name, :age, :type
-  attr_reader :id, :rentals
-
   def add_rental(rental)
-    # Rental.new(date, book, self)
     @rentals << rental
     rental.person = self
   end

@@ -2,21 +2,21 @@ require_relative 'person'
 
 # This syntax creates a student class that inherits from the person class and adds and modifies the person object.
 class Student < Person
+  attr_accessor :classroom
+
   # @param age [Integer] The age of the student.
   # @param classroom [String] The classroom where the student belongs.
   # @param name [String] The name of the student (default is 'unknown').
   # @param parent_permission [Boolean] Permission from parents (default is true).
 
   # Constructor extends parent's constructor by adding @classroom and a parameter for it.
-  def initialize(age, classroom, parent_permission, name = 'unknown')
+  def initialize(classroom, age, parent_permission, name = 'unknown')
     super(age, name, parent_permission: parent_permission)
     @classroom = classroom
     classroom&.add_student(self)
   end
 
-  attr_accessor :classroom
-
   def play_hooky
-    '¯\(ツ)/¯'
+    '¯(ツ)/¯'
   end
 end
