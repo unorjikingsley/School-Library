@@ -44,7 +44,7 @@ class App
     person_type = gets.chomp
     if person_type != '1' && person_type != '2'
       puts 'Invalid option'
-      return 
+      return
     end
     case person_type
     when '1'
