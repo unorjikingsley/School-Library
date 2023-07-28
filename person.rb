@@ -11,7 +11,7 @@ class Person < Nameable
   # @param parent_permission [Boolean] Permission from parents (default is true).
 
   # constructor
-  def initialize(age, name: 'unknown', parent_permission: true)
+  def initialize(age, name: parent_permission: true, name: 'unknown')
     super()
     @id = Random.rand(1..1000)
     @name = name
@@ -20,8 +20,8 @@ class Person < Nameable
     @rental = []
   end
 
-  attr_reader :id, :rentals, :type # getters
-  attr_accessor :name, :age, :rentals # setters
+  attr_accessor :name, :age, :type
+  attr_reader :id, :rentals
 
   def add_rental(rental)
     # Rental.new(date, book, self)
