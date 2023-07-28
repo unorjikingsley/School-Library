@@ -20,11 +20,13 @@ class Person < Nameable
     @rental = []
   end
 
-  attr_reader :id # getters
+  attr_reader :id, :rentals, :type # getters
   attr_accessor :name, :age, :rentals # setters
 
-  def add_rental(book, date)
-    Rental.new(date, book, self)
+  def add_rental(rental)
+    # Rental.new(date, book, self)
+    @rentals << rental
+    rental.person = self
   end
 
   def can_use_services?
@@ -34,6 +36,8 @@ class Person < Nameable
   def correct_name
     @name
   end
+
+  private
 
   def of_age?
     @age >= 18

@@ -9,10 +9,13 @@ class Rental
 
     # add the current Rental object (self) to the list of rentals (rentals attribute) of the book object.
     @book = book
-    book.rentals << self
+    # book.rentals << self
 
     # similar to books. Now, a person/book object knows which rentals are associated with them
     @person = person
-    person.rental << self
+    # person.rental << self
+
+    person&.add_rental(self)
+    book&.add_rental(self)
   end
 end

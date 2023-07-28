@@ -1,60 +1,92 @@
-require_relative App
+require_relative 'app'
 
-# Main class: The Main class is defined, which will be responsible for managing the user
-# interface and interacting with the App class.
-class Main
-  def initialize
-    @app = App.new
-    @option = 0
-  end
+def list_all_books(app)
+  app.list_all_books
+  list_numbers
+end
 
-  def menu_options
-    puts ' '
-    puts ' *** WELCOME TO THE GATE SCHOOL LIBRARY APP! ***'
-    40.times { print '-' }
-    puts ' '
+def list_all_people(app)
+  app.list_all_people
+  list_numbers
+end
 
-    while @option != 7
-      puts 'Please choose an option from the menu below by entering a number: '
-      puts '1 - List all books'
-      puts '2 - List all people'
-      puts '3 - Create a person'
-      puts '4 - Create a book'
-      puts '5 - Create a rental'
-      puts '6 - List all rentals for a given person id'
-      puts '7 - Exit'
-      puts ' ----------------------------------------------------- '
-      puts ' '
-      start_app
+def create_a_person(app)
+  print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+  choice = gets.chomp
+  print 'Age: '
+  age = gets.chomp
+  print 'Name: '
+  name = gets.chomp
+  app.create_a_person(choice, name, age)
+  list_numbers
+end
+
+def create_a_book(app)
+  print 'Title: '
+  title = gets.chomp
+  print 'Author: '
+  author = gets.chomp
+  app.create_a_book(title, author)
+  list_numbers
+end
+
+def create_a_rental(app)
+  app.create_a_rental
+  list_numbers
+end
+
+def list_all_rentals_for_a_given_person_id(app)
+  app.list_all_rentals_for_a_given_person_id
+  list_numbers
+end
+
+def invalid
+  puts 'invalid choice'
+  list_numbers
+end
+
+def list_numbers()
+  list = "
+Please choose an option by enterin a number (1-7):
+1 - List all books
+2 - List all people
+3 - Create a person
+4 - Create a book
+5 - Create a rental
+6 - List all rentals for a given person id
+7 - Exit
+"
+  puts list
+  gets.chomp
+end
+
+def switch(app, number)
+  loop do
+    case number
+    when '1'
+      number = list_all_books(app)
+    when '2'
+      number = list_all_people(app)
+    when '3'
+      number = create_a_person(app)
+    when '4'
+      number = create_a_book(app)
+    when '5'
+      number = create_a_rental(app)
+    when '6'
+      number = list_all_rentals_for_a_given_person_id(app)
+    else
+      puts 'Thank you for using this app!'
+      break
     end
-  end
-
-  def start_app
-    print 'option: '
-    @option = gets.chomp.to_i
-    case @option
-    when 1
-      @app.list_books
-    when 2 
-      @app.list_people
-    when 3 
-      @app.create_person
-    when 4 
-      @app.create_book
-    when 5 
-      @app.create_rental
-    when 6 
-      @app.list_rentals_for_person_id
-    when 7 then break end
-  end
-
-  def end_app
-    puts ' '
-    puts 'Thanks For Using The School Library App!'
-    puts ' '
   end
 end
 
-main = Main.new
-main.menu_options
-main.end_app
+def main()
+  app = App.new
+  puts 'Welcome to School Library App!'
+  number = list_numbers
+  switch(app, number)
+end
+
+main

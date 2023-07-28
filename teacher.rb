@@ -8,7 +8,7 @@ class Teacher < Person
   # @param parent_permission [Boolean] Permission from parents (default is true).
 
   def initialize(age, specialization, name: 'unknown', parent_permission: true)
-    super(age, name, parent_permission)
+    super(age, name, parent_permission: parent_permission)
     @specialization = specialization
   end
 
