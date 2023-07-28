@@ -8,7 +8,7 @@ class Student < Person
   # @param parent_permission [Boolean] Permission from parents (default is true).
 
   # Constructor extends parent's constructor by adding @classroom and a parameter for it.
-  def initialize(age, classroom, name = 'unknown', parent_permission)
+  def initialize(age, classroom, parent_permission, name = 'unknown')
     super(age, name, parent_permission: parent_permission)
     @classroom = classroom
     classroom&.add_student(self)

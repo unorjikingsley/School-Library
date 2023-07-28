@@ -11,7 +11,7 @@ class Person < Nameable
   # @param parent_permission [Boolean] Permission from parents (default is true).
 
   # constructor
-  def initialize(age, name: parent_permission: true, name: 'unknown')
+  def initialize(age, parent_permission: true, name: 'unknown')
     super()
     @id = Random.rand(1..1000)
     @name = name
