@@ -31,7 +31,7 @@ class App
       person = create_a_teacher(name, age)
       person.type = 'Teacher'
     else
-      puts 'wrong choice, die'
+      puts 'wrong choice, choose from the option'
     end
     @people << person
     puts 'Person created successfully'
@@ -44,16 +44,13 @@ class App
   end
 
   def create_a_rental()
-    puts '
-Select a book from the following list by number'
+    puts 'Select a book from the following list by number'
     list_books
     index_book = gets.chomp.to_i
-    puts '
-Select a person from the following list by number (not id)'
+    puts 'Select a person from the following list by number (not id)'
     list_people
     index_person = gets.chomp.to_i
-    print '
-Date: '
+    print 'Date: '
     date = gets.chomp
     rental = Rental.new(date, @books[index_book], @people[index_person])
     @rentals << rental
