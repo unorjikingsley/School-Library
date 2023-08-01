@@ -12,12 +12,8 @@ def switch(user, number)
       number = user.create_a_person
     when '4'
       number = user.create_a_book
-    when '5'
-      number = user.create_a_rental
-    when '6'
-      number = user.list_all_rentals_for_a_given_person_id
     else
-      puts 'Thank you for using this app!'
+      puts 'yhjwabfqjncnjl'
       break
     end
   end
