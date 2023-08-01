@@ -23,7 +23,7 @@ def switch(user, number)
   end
 end
 
-def main
+def main()
   app = App.new
   user = UserInteractions.new(app)
   puts 'Welcome to School Library App!'
