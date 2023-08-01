@@ -12,14 +12,18 @@ def switch(user, number)
       number = user.create_a_person
     when '4'
       number = user.create_a_book
+    when '5'
+      number = user.create_a_rental
+    when '6'
+      number = user.list_all_rentals_for_a_given_person_id
     else
-      puts 'yhjwabfqjncnjl'
+      puts 'Thank you for using this app'
       break
     end
   end
 end
 
-def main()
+def main
   app = App.new
   user = UserInteractions.new(app)
   puts 'Welcome to School Library App!'

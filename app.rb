@@ -5,7 +5,7 @@ require_relative 'rental'
 require_relative 'classroom'
 
 class App
-  def initialize()
+  def initialize
     @books = []
     @people = []
     @rentals = []
@@ -43,7 +43,7 @@ class App
     puts 'Book created successfully'
   end
 
-  def create_a_rental()
+  def create_a_rental
     puts 'Select a book from the following list by number'
     list_books
     index_book = gets.chomp.to_i

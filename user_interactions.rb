@@ -3,17 +3,17 @@ class UserInteractions
     @app = app
   end
 
-  def list_all_books()
+  def list_all_books
     @app.list_all_books
     list_numbers
   end
 
-  def list_all_people()
+  def list_all_people
     @app.list_all_people
     list_numbers
   end
 
-  def create_a_person()
+  def create_a_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     choice = gets.chomp
     print 'Age: '
@@ -24,7 +24,7 @@ class UserInteractions
     list_numbers
   end
 
-  def create_a_book()
+  def create_a_book
     print 'Title: '
     title = gets.chomp
     print 'Author: '
@@ -33,12 +33,12 @@ class UserInteractions
     list_numbers
   end
 
-  def create_a_rental()
+  def create_a_rental
     @app.create_a_rental
     list_numbers
   end
 
-  def list_all_rentals_for_a_given_person_id()
+  def list_all_rentals_for_a_given_person_id
     @app.list_all_rentals_for_a_given_person_id
     list_numbers
   end
@@ -48,7 +48,7 @@ class UserInteractions
     list_numbers
   end
 
-  def list_numbers()
+  def list_numbers
     list = "
       Please choose an option by entering a number (1-7):
       1 - List all books
