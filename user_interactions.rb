@@ -1,6 +1,7 @@
 class UserInteractions
   def initialize(app)
     @app = app
+    @input_handler = InputHandler.new
   end
 
   def list_all_books
@@ -20,7 +21,7 @@ class UserInteractions
     age = gets.chomp
     print 'Name: '
     name = gets.chomp
-    @app.create_a_person(choice, name, age)
+    @app.create_a_person(choice, name, age, @input_handler)
     list_numbers
   end
 
@@ -44,21 +45,21 @@ class UserInteractions
   end
 
   def invalid
-    puts 'invalid choice'
+    puts 'Invalid choice'
     list_numbers
   end
 
   def list_numbers
     list = "
-      Please choose an option by entering a number (1-7):
-      1 - List all books
-      2 - List all people
-      3 - Create a person
-      4 - Create a book
-      5 - Create a rental
-      6 - List all rentals for a given person id
-      7 - Exit
-      "
+Please choose an option by entering a number (1-7):
+1 - List all books
+2 - List all people
+3 - Create a person
+4 - Create a book
+5 - Create a rental
+6 - List all rentals for a given person id
+7 - Exit
+  "
     puts list
     gets.chomp
   end

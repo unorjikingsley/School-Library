@@ -1,5 +1,6 @@
 require_relative 'app'
 require_relative 'user_interactions'
+require_relative 'input_handler'
 
 def switch(user, number)
   loop do
@@ -23,7 +24,7 @@ def switch(user, number)
   end
 end
 
-def main()
+def main
   app = App.new
   user = UserInteractions.new(app)
   puts 'Welcome to School Library App!'
