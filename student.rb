@@ -4,12 +4,6 @@ require_relative 'person'
 class Student < Person
   attr_accessor :classroom
 
-  # @param age [Integer] The age of the student.
-  # @param classroom [String] The classroom where the student belongs.
-  # @param name [String] The name of the student (default is 'unknown').
-  # @param parent_permission [Boolean] Permission from parents (default is true).
-
-  # Constructor extends parent's constructor by adding @classroom and a parameter for it.
   def initialize(classroom, age, parent_permission, name = 'unknown')
     super(age, name, parent_permission: parent_permission)
     @classroom = classroom

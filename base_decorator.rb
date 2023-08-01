@@ -5,8 +5,6 @@
 
 require_relative 'nameable'
 
-# Prepare base Decorator
-# Make sure that it inherits from Nameable.
 class BaseDecorator < Nameable
   def initialize(nameable)
     super()
