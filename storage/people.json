@@ -1,0 +1,27 @@
+[
+  {
+    "id": 165,
+    "type": "Student",
+    "name": "frank",
+    "age": "13",
+    "parent_permission": true,
+    "rentals": [
+      {
+        "date": "2023/04/04"
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "type": "Teacher",
+    "name": "king",
+    "age": "king",
+    "specialization": "doctor",
+    "parent_permission": true,
+    "rentals": [
+      {
+        "date": "2022/01/07"
+      }
+    ]
+  }
+]

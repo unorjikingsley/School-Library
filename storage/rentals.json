@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2023/04/04",
+    "person": {
+      "id": 165,
+      "type": "Student",
+      "name": "frank",
+      "age": "13",
+      "parent_permission": true,
+      "rentals": [
+        {
+          "date": "2023/04/04"
+        }
+      ]
+    },
+    "book": {
+      "title": "game of thrones",
+      "author": "david got",
+      "rentals": [
+        {
+          "date": "2023/04/04"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2022/01/07",
+    "person": {
+      "id": 162,
+      "type": "Teacher",
+      "name": "king",
+      "age": "king",
+      "specialization": "doctor",
+      "parent_permission": true,
+      "rentals": [
+        {
+          "date": "2022/01/07"
+        }
+      ]
+    },
+    "book": {
+      "title": "lord of the rings",
+      "author": "tolkien",
+      "rentals": [
+        {
+          "date": "2022/01/07"
+        }
+      ]
+    }
+  }
+]

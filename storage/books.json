@@ -1,0 +1,20 @@
+[
+  {
+    "title": "game of thrones",
+    "author": "david got",
+    "rentals": [
+      {
+        "date": "2023/04/04"
+      }
+    ]
+  },
+  {
+    "title": "lord of the rings",
+    "author": "tolkien",
+    "rentals": [
+      {
+        "date": "2022/01/07"
+      }
+    ]
+  }
+]
