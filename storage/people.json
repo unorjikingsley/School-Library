@@ -1,27 +1,47 @@
 [
   {
-    "id": 165,
+    "id": 101,
     "type": "Student",
-    "name": "frank",
+    "name": "urch",
     "age": "13",
     "parent_permission": true,
     "rentals": [
       {
-        "date": "2023/04/04"
+        "date": "2022/01/05"
       }
     ]
   },
   {
-    "id": 162,
-    "type": "Teacher",
-    "name": "king",
-    "age": "king",
-    "specialization": "doctor",
+    "id": 124,
+    "type": "Student",
+    "name": "Uche",
+    "age": "15",
     "parent_permission": true,
     "rentals": [
       {
-        "date": "2022/01/07"
+        "date": "2022/04/01"
       }
+    ]
+  },
+  {
+    "id": 96,
+    "type": "Student",
+    "name": "Jide",
+    "age": "18",
+    "parent_permission": false,
+    "rentals": [
+
+    ]
+  },
+  {
+    "id": 170,
+    "type": "Teacher",
+    "name": "king",
+    "age": "27",
+    "specialization": "doctor",
+    "parent_permission": true,
+    "rentals": [
+
     ]
   }
 ]

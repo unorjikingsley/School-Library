@@ -1,51 +1,58 @@
 [
   {
-    "date": "2023/04/04",
+    "date": "2022/01/05",
     "person": {
-      "id": 165,
+      "id": 101,
       "type": "Student",
-      "name": "frank",
+      "name": "urch",
       "age": "13",
       "parent_permission": true,
       "rentals": [
         {
-          "date": "2023/04/04"
+          "date": "2022/01/05"
         }
       ]
     },
     "book": {
-      "title": "game of thrones",
-      "author": "david got",
+      "title": "togtn",
+      "author": "ldknf",
       "rentals": [
         {
-          "date": "2023/04/04"
+          "date": "2022/01/05"
         }
       ]
-    }
+    },
+    "person_book_index": [
+      0,
+      0
+    ]
   },
   {
-    "date": "2022/01/07",
+    "date": "2022/04/01",
     "person": {
-      "id": 162,
-      "type": "Teacher",
-      "name": "king",
-      "age": "king",
-      "specialization": "doctor",
+      "id": 124,
+      "type": "Student",
+      "name": "Uche",
+      "age": "15",
       "parent_permission": true,
       "rentals": [
         {
-          "date": "2022/01/07"
+          "date": "2022/04/01"
         }
       ]
     },
     "book": {
-      "title": "lord of the rings",
-      "author": "tolkien",
+      "title": "Game of thrones",
+      "author": "Unorji",
       "rentals": [
         {
-          "date": "2022/01/07"
+          "date": "2022/04/01"
         }
       ]
-    }
+    },
+    "person_book_index": [
+      1,
+      1
+    ]
   }
 ]
