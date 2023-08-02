@@ -97,11 +97,10 @@ No tests here...
 - GitHub: [@Kingsley](https://github.com/unorjikingsley)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/unorjikingsley)
 
-<!-- 👤 **RACHA OULDBABAALI**
+👤 **Shaheryar Abid**
 
-- GitHub: [@racha](https://github.com/rachaouldbabaali)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rachaouldbabaali) -->
-
+- GitHub: [@Shaheryar](https://github.com/Shaheryar0054)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shaheryar-abid/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,6 +138,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/unorjikingsley/School-Library/blob/basicUI/LICENSE) licensed.
+This project is [MIT](https://github.com/unorjikingsley/School-Library/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

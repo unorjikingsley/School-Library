@@ -9,11 +9,6 @@ class Person < Nameable
   attr_accessor :name, :age, :type
   attr_reader :id, :rentals
 
-  # @param age [Integer] The age of the person.
-  # @param name [String] The name of the person (default is 'unknown').
-  # @param parent_permission [Boolean] Permission from parents (default is true).
-
-  # constructor
   def initialize(age, name = 'unknown', parent_permission: true)
     super()
     @id = Random.rand(1..188)

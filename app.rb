@@ -5,7 +5,7 @@ require_relative 'rental'
 require_relative 'classroom'
 
 class App
-  def initialize()
+  def initialize
     @books = []
     @people = []
     @rentals = []
@@ -23,15 +23,16 @@ class App
     end
   end
 
-  def create_a_person(choice, name, age)
+  def create_a_person(choice, name, age, input_handler)
     if choice == '1'
-      person = create_a_student(name, age)
+      person = create_a_student(name, age, input_handler)
       person.type = 'Student'
     elsif choice == '2'
-      person = create_a_teacher(name, age)
+      person = create_a_teacher(name, age, input_handler)
       person.type = 'Teacher'
     else
-      puts 'wrong choice, die'
+      puts 'Wrong choice, choose from the options'
+      return
     end
     @people << person
     puts 'Person created successfully'
@@ -43,17 +44,14 @@ class App
     puts 'Book created successfully'
   end
 
-  def create_a_rental()
-    puts '
-Select a book from the following list by number'
+  def create_a_rental
+    puts 'Select a book from the following list by number'
     list_books
     index_book = gets.chomp.to_i
-    puts '
-Select a person from the following list by number (not id)'
+    puts 'Select a person from the following list by number (not id)'
     list_people
     index_person = gets.chomp.to_i
-    print '
-Date: '
+    print 'Date: '
     date = gets.chomp
     rental = Rental.new(date, @books[index_book], @people[index_person])
     @rentals << rental
@@ -71,19 +69,15 @@ Date: '
 
   private
 
-  def create_a_student(name, age)
-    print 'Has parent permission? [Y/N]: '
-    parent = gets.chomp
-    permission = true if %w[Y y].include?(parent)
-    permission = false if %w[N n].include?(parent)
+  def create_a_student(name, age, input_handler)
+    permission = input_handler.ask_for_parent_permission
     label = 'math'
     classroom = Classroom.new(label)
     Student.new(classroom, age, permission, name)
   end
 
-  def create_a_teacher(name, age)
-    print 'Specialization: '
-    specialization = gets.chomp
+  def create_a_teacher(name, age, input_handler)
+    specialization = input_handler.ask_for_specialization
     Teacher.new(specialization, age, name)
   end
 
