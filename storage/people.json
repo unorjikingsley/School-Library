@@ -1,1 +1,27 @@
-[#<Student:0x0000023d7fb9ee70 @id=62, @name="junior", @age="10", @parent_permission=false, @rentals=[#<Rental:0x0000023d7f8a1218 @date="2023/01/08", @person=#<Student:0x0000023d7fb9ee70 ...>, @book=#<Book:0x0000023d7f8a2cd0 @title="Games of throne", @author="johnnu", @rentals=[#<Rental:0x0000023d7f8a1218 ...>]>>], @classroom=#<Classroom:0x0000023d7f8a40f8 @label="math", @students=[#<Student:0x0000023d7fb9ee70 ...>]>, @type="Student">, #<Teacher:0x0000023d7fb9ed30 @id=73, @name="king", @age="56", @parent_permission=true, @rentals=[], @specialization="doctor", @type="Teacher">]
+[
+  {
+    "id": 165,
+    "type": "Student",
+    "name": "frank",
+    "age": "13",
+    "parent_permission": true,
+    "rentals": [
+      {
+        "date": "2023/04/04"
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "type": "Teacher",
+    "name": "king",
+    "age": "king",
+    "specialization": "doctor",
+    "parent_permission": true,
+    "rentals": [
+      {
+        "date": "2022/01/07"
+      }
+    ]
+  }
+]

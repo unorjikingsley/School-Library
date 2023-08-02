@@ -18,7 +18,7 @@ def switch(user, number)
     when '6'
       number = user.list_all_rentals_for_a_given_person_id
     else
-      user.exit()
+      user.exit
       break
     end
   end
