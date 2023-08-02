@@ -2,19 +2,19 @@ require 'json'
 
 module Storage
   def storage_directory_check?
-    Dir.exist?("storage")
+    Dir.exist?('storage')
   end
 
   def create_storage_directory
-    Dir.mkdir("storage")
+    Dir.mkdir('storage')
   end
 
   def file_check?(name)
-    File.exists?("#{name}.json")
+    File.exist?("#{name}.json")
   end
 
   def create_file(name, data)
-    File.open("storage/#{name}.json", "w") do |f|
+    File.open("storage/#{name}.json", 'w') do |f|
       f.write(JSON.pretty_generate(data))
     end
   end
