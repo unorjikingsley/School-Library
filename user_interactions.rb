@@ -69,8 +69,8 @@ Please choose an option by entering a number (1-7):
   end
 
   def exit
-    create_storage_directory() unless storage_directory_check?()
-    app_arrays = %w(people books rentals)
+    create_storage_directory unless storage_directory_check?
+    app_arrays = %w[people books rentals]
 
     app_arrays.each do |file|
       data = @app.instance_variable_get("@#{file}")
