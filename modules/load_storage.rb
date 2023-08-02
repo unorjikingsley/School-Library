@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module LoadStorage
   def load_data_from_file(file_name)
     file_path = "storage/#{file_name}.json"
