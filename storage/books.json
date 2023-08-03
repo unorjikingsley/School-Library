@@ -28,7 +28,9 @@
     "title": "Essentialism",
     "author": "John Hopkins",
     "rentals": [
-
+      {
+        "date": "2023/08/03"
+      }
     ]
   }
 ]

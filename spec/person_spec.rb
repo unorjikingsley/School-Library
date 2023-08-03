@@ -4,6 +4,8 @@ describe Person do
   before :each do
     @person = Person.new(10, 30, 'Abdulali')
     @unknown = Person.new(10, 10)
+    @book = Book.new('Afghanistan', 'Abdulali')
+    @rental = Rental.new('2023-08-02', @book, @person, [0, 0])
   end
 
   context 'When testing a Person class' do
@@ -27,6 +29,13 @@ describe Person do
 
     it 'should return true have parent permission' do
       expect(@unknown.can_use_services?).to be true
+    end
+  end
+
+  context 'When adding a new rentals' do
+    it 'The add_rental method returns a rental and adds it to the book' do
+      @person.add_rental(@rental)
+      expect(@person.rentals.length).to eql 1
     end
   end
 
