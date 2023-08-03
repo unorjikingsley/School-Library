@@ -3,6 +3,7 @@ require_relative 'person'
 # This syntax creates a Teacher class that inherits from the person class and adds and modifies the person object.
 class Teacher < Person
   attr_reader :specialization
+  
   # @param age [Integer] The age of the teacher.
   # @param specialization [String] The specialization of the teacher.
   # @param name [String] The name of the teacher (default is 'unknown').
