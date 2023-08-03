@@ -4,7 +4,6 @@
 
 require_relative 'nameable'
 
-# This syntax creates a Person class and makes sure makes other files cn create objects from it.
 class Person < Nameable
   attr_accessor :name, :age, :type
   attr_reader :id, :rentals
