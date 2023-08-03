@@ -1,4 +1,8 @@
+require './modules/storage'
+
 class UserInteractions
+  include Storage
+
   def initialize(app)
     @app = app
     @input_handler = InputHandler.new
@@ -62,5 +66,17 @@ Please choose an option by entering a number (1-7):
   "
     puts list
     gets.chomp
+  end
+
+  def exit
+    create_storage_directory unless storage_directory_check?
+    app_arrays = %w[people books rentals]
+
+    app_arrays.each do |file|
+      data = @app.instance_variable_get("@#{file}")
+      json_data = data.map(&:to_hash)
+      create_file(file, json_data)
+    end
+    puts 'Thank you for using this app!'
   end
 end

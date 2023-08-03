@@ -1,0 +1,87 @@
+[
+  {
+    "date": "2022/01/05",
+    "person": {
+      "id": 101,
+      "type": "Student",
+      "name": "urch",
+      "age": "13",
+      "parent_permission": true,
+      "rentals": [
+        {
+          "date": "2022/01/05"
+        }
+      ]
+    },
+    "book": {
+      "title": "togtn",
+      "author": "ldknf",
+      "rentals": [
+        {
+          "date": "2022/01/05"
+        }
+      ]
+    },
+    "person_book_index": [
+      0,
+      0
+    ]
+  },
+  {
+    "date": "2022/04/01",
+    "person": {
+      "id": 124,
+      "type": "Student",
+      "name": "Uche",
+      "age": "15",
+      "parent_permission": true,
+      "rentals": [
+        {
+          "date": "2022/04/01"
+        }
+      ]
+    },
+    "book": {
+      "title": "Game of thrones",
+      "author": "Unorji",
+      "rentals": [
+        {
+          "date": "2022/04/01"
+        }
+      ]
+    },
+    "person_book_index": [
+      1,
+      1
+    ]
+  },
+  {
+    "date": "2023/08/03",
+    "person": {
+      "id": 110,
+      "type": "Teacher",
+      "name": "Frank",
+      "age": "76",
+      "specialization": "Teacher",
+      "parent_permission": true,
+      "rentals": [
+        {
+          "date": "2023/08/03"
+        }
+      ]
+    },
+    "book": {
+      "title": "Essentialism",
+      "author": "John Hopkins",
+      "rentals": [
+        {
+          "date": "2023/08/03"
+        }
+      ]
+    },
+    "person_book_index": [
+      5,
+      3
+    ]
+  }
+]

@@ -16,4 +16,12 @@ class Book
     @rentals << rental
     rental.book = self
   end
+
+  def to_hash
+    {
+      'title' => @title,
+      'author' => @author,
+      'rentals' => @rentals.map { |rental| { 'date' => rental.date } }
+    }
+  end
 end
